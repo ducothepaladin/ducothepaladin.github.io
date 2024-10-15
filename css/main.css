@@ -1,0 +1,18 @@
+@import url(./info.css);
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Playwrite+NG+Modern:wght@100..400&family=Space+Grotesk:wght@300..700&display=swap');
+
+:root {
+    box-sizing: border-box;
+    font-family: "Nunito", serif;
+}
+
+body {
+    background-color: #323443;
+}
+
+.canvas-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
