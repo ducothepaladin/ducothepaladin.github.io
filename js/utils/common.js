@@ -36,3 +36,14 @@ function createImgArr(type, imgCount) {
   }
   return arr;
 }
+
+
+function setHeightPercent(check) {
+  const height = canvasH - (canvasH * (check / 100));
+  return height;
+}
+
+function setWidthPercent(check) {
+  const width = canvasW - (canvasW * (check / 100));
+  return width;
+}

@@ -1,7 +1,7 @@
 //canvasH is from main.js, under code represent the player and it's position
 
 const player = {
-  position: { x: 400, y: 2048 - 200 },
+  position: { x: setWidthPercent(80), y: setHeightPercent(10) },
   velocity: { x: 0, y: 0 },
   gravity: 1,
   playerW: 50,
@@ -188,22 +188,44 @@ const player = {
       spriteDoorContactMe.open
     ) {
       textBox.textRef.style.display = "block";
+    } else {
+        textBox.textRef.style.display = "none";
+        textBox.textRef.style.opacity = 0;
     }
 
-    if(spriteDoorAboutMe.open) {
-      textBox.innerText = "You can learn about this handsome guy in this room. Come on give it a try!!"
+    if (spriteDoorAboutMe.open) {
+      textBox.innerText =
+        "You can learn about this handsome guy in this room. Come on give it a try!!";
+        textBox.textx = 20;
+        textBox.texty = 130;
+        textBox.textRef.style.opacity = 1;
     }
-    if(spriteDoorSkills.open) {
-      textBox.innerText = "He really a skillful learner. I can bet he would be useful for your company. If you don't believe me. Check that room over there!!"
+    if (spriteDoorSkills.open) {
+      textBox.innerText =
+        "He really a skillful learner. I can bet he would be useful for your company. If you don't believe me. Check that room over there!!";
+      textBox.textx = -400;
+      textBox.texty = 150;
+      textBox.textRef.style.opacity = 1;
     }
-    if(spriteDoorProjects.open) {
-      textBox.innerText = "He did plenty of projects during his learning journey.(hehe... half of them are unfinished..what a lazy bastard)..Well anyway You can check them here. Before you go in. Make sure to handle you jaw cause that may make your jaw drop"
+    if (spriteDoorProjects.open) {
+      textBox.innerText =
+        "He did plenty of projects during his learning journey.(hehe... half of them are unfinished..what a lazy bastard)..Well anyway You can check them here. Before you go in. Make sure to handle you jaw cause that may make your jaw drop";
+      textBox.textx = 60;
+      textBox.texty = 190;
+      textBox.textRef.style.opacity = 1;
     }
-    if(spriteDoorContactMe.open) {
-      textBox.innerText = "Oh you really come this far. So Do you want to Hire him? Right??? Ah come on give him a chance. My man derserve it. Plsssss!!!!"
+    if (spriteDoorContactMe.open) {
+      textBox.innerText =
+        "Oh you really come this far. So Do you want to Hire him? Right??? Ah come on give him a chance. My man derserve it. Plsssss!!!!";
+      textBox.textx = 30;
+      textBox.texty = 140;
+      textBox.textRef.style.opacity = 1;
     }
-    if(spriteDoorCetificate.open) {
-      textBox.innerText = "Well here is his certificate libiary."
+    if (spriteDoorCetificate.open) {
+      textBox.innerText = "Well here is his certificate libiary.";
+      textBox.textx = -400;
+      textBox.texty = 140;
+      textBox.textRef.style.opacity = 1;
     }
   },
 };
@@ -218,10 +240,21 @@ const playerMovement = (key) => {
         player.velocity.y = -18;
       }
       break;
+    case "ArrowUp":
+      if (player.velocity.y == 0) {
+        player.velocity.y = -18;
+      }
+      break;
     case "a":
       player.velocity.x = -7;
       break;
+    case "ArrowLeft":
+      player.velocity.x = -7;
+      break;
     case "d":
+      player.velocity.x = 7;
+      break;
+    case "ArrowRight":
       player.velocity.x = 7;
       break;
   }

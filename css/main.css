@@ -4,15 +4,40 @@
 :root {
     box-sizing: border-box;
     font-family: "Nunito", serif;
+    --main-color: #5f382f;
+    --back-color: #323443;
+    --sec-color: #f1d9d3;
 }
 
 body {
-    background-color: #323443;
+    background-color: var(--back-color) ;
+    position: relative;
 }
 
 .canvas-container {
     position: relative;
+    margin-left: 50px;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    gap: 20px;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+
+@media (max-width: 1000px) {
+    .canvas-container {
+        display: block;
+        margin-left: 0;
+    }
+
+    .navbar {
+        width: 1140px;
+        margin-left: 0;
+    }
+
+    .info {
+        display: none;
+    }
 }

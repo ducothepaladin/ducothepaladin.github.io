@@ -38,7 +38,7 @@ let mainPageCollisionBlock = {
   width: 64,
   height: 64,
   draw: function() {
-    ctx.fillStyle = "rgba(255, 0, 0, 0)";
+    ctx.fillStyle = "rgba(255, 100, 69, 0)";
     ctx.fillRect(this.position.x, this.position.y, this.width, this.height);
   }
 }

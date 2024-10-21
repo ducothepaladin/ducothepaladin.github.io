@@ -1,10 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DucoThePaladin</title>
-    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <script src="js/Helpers/variables.js" defer></script>
     <script src="js/classes/Text.js" defer></script>
     <script src="js/utils/common.js" defer></script>
     <script src="js/data/collision.js" defer></script>
@@ -12,33 +17,70 @@
     <script src="js/classes/Sprite.js" defer></script>
     <script src="js/main.js" defer></script>
     <script src="js/events/movementEvent.js" defer></script>
-</head>
-<body>
-    <header>
-        <nav>
-        </nav>
-    </header>
+  </head>
+  <body>
     <div class="canvas-container">
-        <canvas id="canvas">
-        </canvas>
-        <div id="player-text" class="player-text">
-            This is character's talking bar
+      <canvas id="canvas"> </canvas>
+      <div id="player-text" class="player-text">
+        This is character's talking bar
+      </div>
+      <div class="navbar">
+        <div>
+          <h1>Wai Yan Linn</h1>
+          <p>
+            Hello, and welcome to my portfolio!My name is Wai Yan Linn.<br><br>You can
+            navigate to specific pages by clicking the navigation buttons below,
+            or control my little assistant, 'Duco,' to explore each room. Thank
+            you in advance for reaching out to me. Enjoy your stay!
+          </p>
         </div>
-        <div id="about-me" class="door-info">
-            About Me
+        <ul class="nav-container">
+          <li>
+            <a href="#"
+              >About Me <span><i class="fa-regular fa-address-card"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Skills <span><i class="fa-solid fa-seedling"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Projects <span><i class="fa-regular fa-rectangle-list"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Education <span><i class="fa-solid fa-graduation-cap"></i></span
+            ></a>
+          </li>
+          <li>
+            <a href="#"
+              >Contact Me <span><i class="fa-regular fa-envelope"></i></span
+            ></a>
+          </li>
+        </ul>
+        <h3>Here are the key infos to control "Duco".</h3>
+        <div class="info">
+          <div class="key-container">
+            <div class="key w">w<br />(Jump)</div>
+            <div class="key a">a<br />(Move Left)</div>
+            <div class="key d">d<br />(Move Right)</div>
+          </div>
+          <div class="key-container">
+            <div class="key w">
+              <i class="fa-solid fa-arrow-up"></i><br />(Jump)
+            </div>
+            <div class="key a">
+              <i class="fa-solid fa-arrow-left"></i><br />(Move Left)
+            </div>
+            <div class="key d">
+              <i class="fa-solid fa-arrow-right"></i><br />(Move Right)
+            </div>
+          </div>
         </div>
-        <div id="skills" class="door-info">
-            Skills
-        </div>
-        <div id="projects" class="door-info">
-            Projects
-        </div>
-        <div id="education" class="door-info">
-            Education
-        </div>
-        <div id="contact-me" class="door-info">
-            Contact Me
-        </div>
+      </div>
     </div>
-</body>
+  </body>
 </html>

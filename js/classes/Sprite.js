@@ -167,15 +167,15 @@ const spritePlayer = {
 };
 
 const spriteDoorAboutMe = {
-  position: { x: 67, y: 1520 },
+  position: { x: setWidthPercent(94), y: setHeightPercent(25.7) },
   image: new Image(),
   imageSp: new Image(),
   doorOpening: door,
-  info: document.getElementById("about-me"),
   eFrame: 0,
   bFrame: 6,
   frame: 1,
   open: false,
+  info: "About me",
   draw: function () {
     this.image.src = this.doorOpening[this.frame - 1];
     this.imageSp.src = this.doorOpening[2];
@@ -196,8 +196,7 @@ const spriteDoorAboutMe = {
         96 * 1.5
       );
     }
-    this.info.style.top = `${this.position.y - 40}px`;
-    this.info.style.left = `${this.position.x + 374}px`;
+    doorLabel.draw(this.info,this.position.x + 58,this.position.y - 30);
 
   },
   updateFrame: function () {
@@ -218,38 +217,38 @@ const spriteDoorAboutMe = {
 
 const spriteDoorSkills = {
   ...spriteDoorAboutMe,
+  info: "Skills",
   image: new Image(),
   imageSp: new Image(),
   doorOpening: door,
-  position: { x: 850, y: 1265 },
-  info: document.getElementById("skills"),
+  position: { x: setWidthPercent(26), y: setHeightPercent(38.2) },
 };
 
 const spriteDoorProjects = {
   ...spriteDoorAboutMe,
+  info: "Projects",
   image: new Image(),
   imageSp: new Image(),
   doorOpening: door,
-  position: { x: 150, y: 1074 },
-  info: document.getElementById("projects"),
+  position: { x: setWidthPercent(87), y: setHeightPercent(47.5) },
 };
 
 const spriteDoorContactMe = {
   ...spriteDoorAboutMe,
+  info: "Contact",
   image: new Image(),
   imageSp: new Image(),
   doorOpening: door,
-  position: { x: 105, y: 308 },
-  info: document.getElementById("contact-me"),
+  position: { x: setWidthPercent(90), y: setHeightPercent(84.9) },
 };
 
 const spriteDoorCetificate = {
   ...spriteDoorAboutMe,
+  info: "Education",
   image: new Image(),
   imageSp: new Image(),
   doorOpening: door,
-  position: { x: 960, y: 308 },
-  info: document.getElementById("education"),
+  position: { x: setWidthPercent(16), y: setHeightPercent(84.9) },
 };
 
 const openCheck = () => {
