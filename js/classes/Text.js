@@ -4,14 +4,15 @@ const text = document.getElementById("player-text");
 
 const textBox = {
     textRef: text,
-    innerText: "Hello World",
+    innerText: "Hello, I’m Duco! I’ll be your guide as you explore this portfolio.",
+    keyNav: "",
     texty: 130,
     textx: 20,
+    initialCheck: true,
     followText: function(x, y) {
         this.textRef.style.top = `${y - this.texty}px`;
         this.textRef.style.left = `${x + this.textx}px`;
-        this.textRef.innerText = this.innerText;
-        this.textRef.style.display = "none";
+        this.textRef.innerHTML = `<p>${this.innerText}</p><br>${this.keyNav}`;
     }
 }
 

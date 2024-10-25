@@ -126,7 +126,7 @@ const player = {
     // console.log("p po - " + Math.floor(this.position.x) + " & " + Math.floor(this.position.y) + "\n" + "door po - " + (spriteDoorCetificate.position.x - 150) + " & " + (spriteDoorCetificate.position.y + 49) )
 
     this.doorOpenPositionCheckPoint(
-      spriteDoorAboutMe.position.x + 300,
+      spriteDoorAboutMe.position.x + 250,
       spriteDoorAboutMe.position.y + 53,
       spriteDoorAboutMe,
       true
@@ -189,41 +189,52 @@ const player = {
     ) {
       textBox.textRef.style.display = "block";
     } else {
-        textBox.textRef.style.display = "none";
-        textBox.textRef.style.opacity = 0;
+        if(textBox.initialCheck) {
+          textBox.textRef.style.opacity = 1;
+          textBox.textRef.style.display = "block";
+        } else {
+          textBox.textRef.style.opacity = 0;
+          textBox.textRef.style.display = "none";
+        }
     }
 
     if (spriteDoorAboutMe.open) {
       textBox.innerText =
-        "You can learn about this handsome guy in this room. Come on give it a try!!";
-        textBox.textx = 20;
+        "Check out this awesome guy in this room go ahead, take a look!";
+        textBox.keyNav = "Click \"<span style='color: red;font-size: 1.2rem;'>E</span>\" to Enter...";
+        textBox.textx = 60;
         textBox.texty = 130;
         textBox.textRef.style.opacity = 1;
+        textBox.initialCheck = false;
     }
     if (spriteDoorSkills.open) {
       textBox.innerText =
-        "He really a skillful learner. I can bet he would be useful for your company. If you don't believe me. Check that room over there!!";
-      textBox.textx = -400;
+        "He's a really skilled learner, and I bet he'd be a great fit for your company. Don’t believe me? Just check that room over there!";
+      textBox.keyNav = "Click \"<span style='color: red;font-size: 1.2rem;'>E</span>\" to Enter...";
+      textBox.textx = -430;
       textBox.texty = 150;
       textBox.textRef.style.opacity = 1;
     }
     if (spriteDoorProjects.open) {
       textBox.innerText =
-        "He did plenty of projects during his learning journey.(hehe... half of them are unfinished..what a lazy bastard)..Well anyway You can check them here. Before you go in. Make sure to handle you jaw cause that may make your jaw drop";
-      textBox.textx = 60;
+        "He’s tackled plenty of projects during his learning journey, each one pushing his skills further. You can check them out here, there’s some pretty cool stuff!";
+      textBox.keyNav = "Click \"<span style='color: red;font-size: 1.2rem;'>E</span>\" to Enter...";
+      textBox.textx = 90;
       textBox.texty = 190;
       textBox.textRef.style.opacity = 1;
     }
     if (spriteDoorContactMe.open) {
       textBox.innerText =
-        "Oh you really come this far. So Do you want to Hire him? Right??? Ah come on give him a chance. My man derserve it. Plsssss!!!!";
-      textBox.textx = 30;
+        "Oh wow, you made it this far! So, you’re thinking about hiring him, right? Come on, give him a shot, he totally deserves it.";
+      textBox.keyNav = "Click \"<span style='color: red;font-size: 1.2rem;'>E</span>\" to Enter...";
+      textBox.textx = 60;
       textBox.texty = 140;
       textBox.textRef.style.opacity = 1;
     }
     if (spriteDoorCetificate.open) {
-      textBox.innerText = "Well here is his certificate libiary.";
-      textBox.textx = -400;
+      textBox.innerText = "I added this room to share how I learned programming and why I’m so passionate about it. It’s been an exciting journey, and I’d love to show you what got me hooked!";
+      textBox.keyNav = "Click \"<span style='color: red;font-size: 1.2rem;'>E</span>\" to Enter...";
+      textBox.textx = -430;
       textBox.texty = 140;
       textBox.textRef.style.opacity = 1;
     }

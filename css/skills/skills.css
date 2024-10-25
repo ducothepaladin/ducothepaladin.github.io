@@ -1,0 +1,127 @@
+.skill-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5%;
+    height: 80vh;
+}
+
+.skill-container>div {
+    width: calc(80vw - 9px);
+    height: calc(80vh - 9px);
+    padding: 5px;
+}
+
+.skill-wheel {
+    background-color: var(--back-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wheel {
+    width: 400px;
+    height: 480px;
+    position: relative;
+    /* display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px; */
+    border-top: 3px solid var(--sec-color);
+    border-bottom: 3px solid var(--sec-color);
+    overflow-y:scroll ;
+}
+
+.wheel::-webkit-scrollbar {
+    display: none;
+}
+
+.wheel>div {
+    width: calc(100% - 40%);
+    background-color: var(--main-color);
+    height: 100px;
+    text-align: start;
+    padding: 0 40px;
+    cursor: pointer;
+    position: relative;
+    margin-left: 30px;
+    line-height: 100px;
+    margin: 4% auto;
+    font-size: 2.5rem;
+    color: var(--sec-color);
+    transition: all 0.2s;
+}
+.wheel>div:hover {
+    box-shadow: 0 0 10px 1px var(--sec-color);
+}
+
+.wheel>div:active {
+    background-color: rgba(92, 29, 2, 0.258);
+}
+
+.check-point {
+    width: 10px;
+    height: 100%;
+    position: absolute;
+    border: 1px solid var(--sec-color);
+    right: -20px;
+    top: 0%;
+}
+
+.wheel span:nth-child(2) {
+    transform: rotate(90deg);
+    border-color: white transparent;
+}
+
+.skill-display {
+    position: relative;
+    border-left: 1px solid var(--sec-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.link {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    top: 0;
+    border: 2px solid var(--sec-color);
+    left: -50px;
+}
+
+.skill-detail {
+    /* border: 1px solid var(--sec-color); */
+    color: var(--sec-color);
+    height: 80%;
+    width: 80%;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.skill-detail>p {
+    text-align: justify;
+}
+
+
+
+.progress {
+    width: 100%;
+    height: 30px;
+    position: relative;
+    border: 1px solid var(--sec-color);
+}
+
+.progress>span {
+    position: absolute;
+    left: 0;
+    height: 100%;
+}
+
+@media (max-width: 1200px) {
+
+    .skill-container {
+        flex-wrap: wrap;
+    }
+}

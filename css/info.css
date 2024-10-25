@@ -7,7 +7,13 @@
     width: 400px;
     height: auto;
     font-size: 20px;
-    transition: 1s;
+    transition: 0.8s ease-out;
+}
+
+.player-text>p {
+    padding: 0;
+    margin: 0;
+    text-align: start;
 }
 
 .navbar {
